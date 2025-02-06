@@ -1,0 +1,86 @@
+// Função para animar a rolagem de elementos
+document.addEventListener("DOMContentLoaded", () => {
+    // Selecionando elementos para animação
+    const btnVagas = document.getElementById('btn-vagas');
+    const btnPosts = document.getElementById('btn-posts');
+    const btnContatos = document.getElementById('btn-contatos');
+
+    // Adicionando animação aos botões
+    btnVagas.addEventListener('mouseover', () => {
+        btnVagas.style.transform = 'scale(1.1)';
+    });
+    btnVagas.addEventListener('mouseout', () => {
+        btnVagas.style.transform = 'scale(1)';
+    });
+
+    btnPosts.addEventListener('mouseover', () => {
+        btnPosts.style.transform = 'scale(1.1)';
+    });
+    btnPosts.addEventListener('mouseout', () => {
+        btnPosts.style.transform = 'scale(1)';
+    });
+
+    btnContatos.addEventListener('mouseover', () => {
+        btnContatos.style.transform = 'scale(1.1)';
+    });
+    btnContatos.addEventListener('mouseout', () => {
+        btnContatos.style.transform = 'scale(1)';
+    });
+
+    // Animação para carregar posts e vagas
+    const posts = document.querySelectorAll('.post');
+    const jobs = document.querySelectorAll('.job');
+    const companies = document.querySelectorAll('.company');
+
+    const animateOnScroll = (elements) => {
+        elements.forEach((element) => {
+            const position = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (position < windowHeight - 100) {
+                element.classList.add('visible');
+            }
+        });
+    };
+
+    // Adicionando animação de rolagem
+    window.addEventListener('scroll', () => {
+        animateOnScroll(posts);
+        animateOnScroll(jobs);
+        animateOnScroll(companies);
+    });
+
+    // Chamar a função para animar elementos na primeira carga
+    animateOnScroll(posts);
+    animateOnScroll(jobs);
+    animateOnScroll(companies);
+
+    // Animação de transição suave ao exibir elementos
+    const transitionDuration = 0.8; // duração da animação em segundos
+
+    posts.forEach((post, index) => {
+        post.style.transition = `transform ${transitionDuration}s ease, opacity ${transitionDuration}s ease`;
+        post.style.opacity = '0';
+        setTimeout(() => {
+            post.style.opacity = '1';
+            post.style.transform = 'translateY(0)';
+        }, index * 100); // Efeito de "delay" para cada post
+    });
+
+    jobs.forEach((job, index) => {
+        job.style.transition = `transform ${transitionDuration}s ease, opacity ${transitionDuration}s ease`;
+        job.style.opacity = '0';
+        setTimeout(() => {
+            job.style.opacity = '1';
+            job.style.transform = 'translateY(0)';
+        }, index * 100); // Efeito de "delay" para cada vaga
+    });
+
+    companies.forEach((company, index) => {
+        company.style.transition = `transform ${transitionDuration}s ease, opacity ${transitionDuration}s ease`;
+        company.style.opacity = '0';
+        setTimeout(() => {
+            company.style.opacity = '1';
+            company.style.transform = 'translateY(0)';
+        }, index * 100); // Efeito de "delay" para cada empresa
+    });
+});

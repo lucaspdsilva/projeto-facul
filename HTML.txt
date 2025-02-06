@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulheres Dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Mulheres Dev Logo" class="logo">
+            <h1>Mulheres Dev</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Conectando mulheres na tecnologia</h2>
+        <p>Aumente a participação feminina no mercado de TI com ofertas de emprego e mais.</p>
+        <div class="buttons">
+            <button class="btn" id="btn-vagas">Vagas</button>
+            <button class="btn" id="btn-posts">Posts</button>
+            <button class="btn" id="btn-contatos">Contatos</button>
+        </div>
+    </section>
+
+    <section class="filters">
+        <h3>Filtrar Vagas</h3>
+        <div class="filter-options">
+            <select id="job-type">
+                <option value="all">Todos os Tipos</option>
+                <option value="remote">Remoto</option>
+                <option value="onsite">Presenciais</option>
+            </select>
+            <select id="job-location">
+                <option value="all">Todos os Locais</option>
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="posts">
+        <h3>Últimos Posts</h3>
+        <div class="post">
+            <h4>Mulheres Dev em alta no mercado!</h4>
+            <p>Descubra como o número de mulheres desenvolvedoras está aumentando nas principais empresas de TI!</p>
+        </div>
+        <div class="post">
+            <h4>Como se destacar como mulher na tecnologia</h4>
+            <p>Leia este artigo para dicas sobre como construir uma carreira sólida e ser reconhecida no mercado de TI.</p>
+        </div>
+        <div class="post">
+            <h4>Entrevista com CEO da TechWomen</h4>
+            <p>Entenda como a TechWomen se tornou uma referência no apoio ao crescimento de mulheres no setor de TI.</p>
+        </div>
+    </section>
+
+    <section class="jobs">
+        <h3>Vagas em Destaque</h3>
+        <div class="job">
+            <h4>Desenvolvedora Front-End</h4>
+            <p>Empresa: DevTech</p>
+            <p>Local: Remoto</p>
+            <button class="btn">Ver vaga</button>
+        </div>
+        <div class="job">
+            <h4>Analista de TI</h4>
+            <p>Empresa: TechWomen</p>
+            <p>Local: São Paulo</p>
+            <button class="btn">Ver vaga</button>
+        </div>
+        <div class="job">
+            <h4>Desenvolvedora Back-End</h4>
+            <p>Empresa: InovaTI</p>
+            <p>Local: Rio de Janeiro</p>
+            <button class="btn">Ver vaga</button>
+        </div>
+        <div class="job">
+            <h4>Data Scientist</h4>
+            <p>Empresa: DataTech</p>
+            <p>Local: Remoto</p>
+            <button class="btn">Ver vaga</button>
+        </div>
+        <div class="job">
+            <h4>Designer UX/UI</h4>
+            <p>Empresa: UXInnovations</p>
+            <p>Local: São Paulo</p>
+            <button class="btn">Ver vaga</button>
+        </div>
+    </section>
+
+    <section class="companies">
+        <h3>Empresas Parceiras</h3>
+        <div class="company">
+            <h4>DevTech</h4>
+            <p>Somos uma empresa especializada no desenvolvimento de soluções inovadoras em tecnologia. Buscamos sempre talentos femininos!</p>
+            <button class="btn">Ver Perfil</button>
+        </div>
+        <div class="company">
+            <h4>TechWomen</h4>
+            <p>Apoiamos e promovemos o crescimento de mulheres na tecnologia, oferecendo oportunidades de carreira e um ambiente de trabalho inclusivo.</p>
+            <button class="btn">Ver Perfil</button>
+        </div>
+        <div class="company">
+            <h4>InovaTI</h4>
+            <p>Inovamos no setor de TI com soluções disruptivas e estamos em busca de mulheres para fortalecer ainda mais nossa equipe!</p>
+            <button class="btn">Ver Perfil</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Mulheres Dev | Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
